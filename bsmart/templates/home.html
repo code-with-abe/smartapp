@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+{% load static %}
+
+    <div class="container mt-5">
+
+        <div class="row justify-content-md-center">
+            <h1>Medtronic 780G Data Analytics</h1>
+
+        </div>
+
+        <div class="row mt-4 justify-content-md-center">
+            <img src="{% static 'images/analytics_pic1.jpg' %}" class="rounded shadow" alt="Analytics" width="500" height="300">
+        </div>
+            
+        <div class="row mt-4 justify-content-md-center">
+        <p>Sign up now and experience the future of Type 1 Diabetes Data Analytics.</p>
+        </div>
+
+        <div class="row justify-content-md-center">
+            {% comment %} <a href="{% url 'signup' %}" class="btn btn-primary btn-lg">Sign Up</a> {% endcomment %}
+            <a href="#" class="btn btn-primary btn-lg">Sign Up</a>
+        </div>
+        
+    </div>
+
+
+{% endblock %}
