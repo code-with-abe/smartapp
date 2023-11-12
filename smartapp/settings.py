@@ -89,13 +89,14 @@ WSGI_APPLICATION = 'smartapp.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'postgres',
-        'USER': 'postgres',
-        'PASSWORD': 'abraham101#',
-        'HOST': 'localhost',
-        'PORT': '5432',
+        'NAME': env('DB_NAME'),
+        'USER': env('DB_USER'),
+        'PASSWORD': env('DB_PASSWORD'),
+        'HOST': env('DB_HOST'),
+        'PORT': env('DB_PORT'),
     }
 }
+#postgres://postgres:*3FE4BA5dCc6EEe6d4*1cAFd5D5FBC62@roundhouse.proxy.rlwy.net:34985/railway
 
 
 # Password validation
