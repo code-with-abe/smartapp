@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h2>Upload Successful</h2>
+    <p>The file <strong>{{ file_name }}</strong> has been successfully uploaded.</p>
+    <!-- Add additional content or links here as needed -->
+    {% if chart_path %}
+        <h2>Chart from CSV Data</h2>
+        <img src="../{{ chart_path }}" alt="Chart">
+    {% endif %}
+</div>
+{% endblock %}
