@@ -28,9 +28,11 @@ def signup(request):
 def login_view(request):
     return auth_views.LoginView.as_view(template_name='login.html')(request)
 
+@login_required
 def dashboard(request):
     return render(request, 'dashboard.html')
 
+@login_required
 def upload(request):
     if request.method == 'POST' and request.FILES['file']:
         uploaded_file = request.FILES['file']

@@ -18,13 +18,14 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a class="navbar-brand" href="#">bSmart</a>
+        <a class="navbar-brand" href="/">bSmart</a>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/">Home</a>
             </li>
 
+            {% if user.is_authenticated %}
 
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="/dashboard/">Dashboard</a>
@@ -34,7 +35,23 @@
               <a class="nav-link active" aria-current="page" href="/upload/">Upload</a>
             </li>
 
+            <div class="p-2 bg-primary text-white">
+              User: {{ user.username }}
+            </div>
 
+            <li class="nav-item">
+              <a href="{% url 'logout' %}" class="btn btn-primary">Log Out</a>
+            </li>
+
+            {% else %}
+
+            <li class="nav-item">
+              <a href="{% url 'login' %}" class="btn btn-primary">Log In</a>
+            </li>
+
+            {% endif %}
+
+           
           </ul>
           
         </div>
