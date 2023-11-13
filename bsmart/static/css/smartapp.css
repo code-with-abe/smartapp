@@ -1,0 +1,21 @@
+.bg-smartapp {
+    background-color: #0A3248 !important; /* Replace with your chosen color */
+}
+
+.text-smartapp {
+    color: #ffffff !important; /* This is for the text color, ensure it contrasts well with your background */
+}
+
+.btn-smartapp {
+    background-color: #0A3248; /* Replace with your chosen hex color */
+    color: #ffffff; /* This is for the text color */
+    border-color: #0A3248; /* Optional: if you want a border, set it to a color of your choice */
+}
+
+.btn-smartapp:hover,
+.btn-smartapp:focus,
+.btn-smartapp:active {
+    background-color: #1b446e; /* A slightly different shade when the button is interacted with */
+    border-color: #1b446e; /* Same here for the border */
+    color: #ffffff;
+}
