@@ -2,6 +2,26 @@
 
 {% block content %}
 <div class="container mt-5">
+<table class="table">
+    <thead class="table-dark">
+        <tr>
+            <th scope="col">File Name</th>
+            <th scope="col">Upload Timestamp</th>
+            <th scope="col"> Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for upload in recent_uploads %}
+        <tr>
+            <td>{{ upload.file_name }}</td>
+            <td>{{ upload.upload_timestamp }}</td>
+            <td>{{ upload.status }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+</div>
+<div class="container mt-5">
     <h2>Upload File</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
@@ -12,4 +32,5 @@
         <button type="submit" class="btn btn-primary">Upload</button>
     </form>
 </div>
+
 {% endblock %}
