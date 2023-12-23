@@ -50,7 +50,7 @@ def upload(request):
     if request.method == 'POST' and 'file' in request.FILES:
         uploaded_file = request.FILES['file']
         
-        # Generate a new filename with a standard prefix and random UUID
+        # Generate a new filename with a standard prefix and random UUID this is experimental
         _, file_extension = os.path.splitext(uploaded_file.name)
         new_file_name = f"med780g_{uuid.uuid4()}{file_extension}"
 
